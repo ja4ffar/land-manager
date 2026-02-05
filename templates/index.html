@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>إدارة بيع الأراضي</title>
+</head>
+<body>
+
+<h2>قائمة المبيعات</h2>
+
+<a href="/add">➕ إضافة بيع</a> |
+<a href="/report">📊 تقرير الديون</a>
+
+<table border="1" cellpadding="5">
+<tr>
+    <th>الاسم</th>
+    <th>الهاتف</th>
+    <th>رقم القطعة</th>
+    <th>نوع البيع</th>
+    <th>المتبقي</th>
+</tr>
+
+{% for r in rows %}
+<tr>
+    <td>{{ r[1] }}</td>
+    <td>{{ r[2] }}</td>
+    <td>{{ r[3] }}</td>
+    <td>{{ r[4] }}</td>
+    <td>{{ r[7] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
